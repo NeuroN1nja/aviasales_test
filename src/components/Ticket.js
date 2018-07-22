@@ -10,7 +10,7 @@ const transferName = {
 }
 
 const Ticket = props => {
-
+    console.log('upd ticketlist');
     const departure_date = moment(props.item.departure_date, "DD-MM-YYYY").locale('ru').format("D MMM YYYY, dd")
     const arrival_date = moment(props.item.arrival_date, "DD-MM-YYYY").locale('ru').format("D MMM YYYY, dd")
 

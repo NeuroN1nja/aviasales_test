@@ -6,15 +6,6 @@ import store from './store'
 import {Provider} from 'react-redux'
 // добавить проптайпсы
 class App extends Component {
-  // state = {
-  //     activeCurrencyId: "1",
-  // }
-
-  // handleChangeCurrencyClassName = e => {
-  //     this.setState({
-  //         activeCurrencyId: e.target.id
-  //     })
-  // }
 
   render() {
     return (
