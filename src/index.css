@@ -3,6 +3,10 @@ body {
     font-family: 'Open Sans', sans-serif;
 }
 
+html {
+    overflow-y:scroll;
+}
+
 main {
     display: flex;
     flex-direction: row;
@@ -16,14 +20,19 @@ main {
     display: block;
 }
 
+.no-tickets {
+    width: 566px;
+    padding: 0;
+    margin: 0;
+}
+
 .ticket-list {
     max-width: 566px;
     padding: 0;
     margin: 0;
-
 }
 
-.ticket {
+.ticket{
     display: flex;
     border-width: 1px;
     border-radius: 5px;

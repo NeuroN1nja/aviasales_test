@@ -24,9 +24,8 @@ export const toggleAllCheckbox = (checked) => ({
     payload: {checked}
 });
 
-export const toggleOnlyCheckbox = (name) => ({
-    type: TOGGLE_ONLY_CHECKBOX,
-    payload: {name}
+export const toggleOnlyCheckbox = () => ({
+    type: TOGGLE_ONLY_CHECKBOX
 });
 
 

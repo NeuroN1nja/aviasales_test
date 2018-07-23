@@ -16,8 +16,8 @@ class Filter extends Component {
     }
 
     toggleOnly = e => {
-        this.props.toggleOnlyCheckbox(e.target.name)
-}
+        this.props.toggleOnlyCheckbox()
+    }
 
     render() {
         return (

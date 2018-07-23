@@ -40,7 +40,7 @@ export default (initialChecks = checkboxes, action) => {
         case TOGGLE_ONLY_CHECKBOX:
             const onlyChecks = {...initialChecks}
             changeObj(onlyChecks, false)
-            return {...onlyChecks, [action.payload.name]: true}
+            return {...onlyChecks}
             
         default:
             return initialChecks;

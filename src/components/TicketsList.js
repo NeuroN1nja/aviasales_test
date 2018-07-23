@@ -11,7 +11,9 @@ class TicketsList extends Component {
 
         return (
             <ul className="ticket-list">
-                {this.props.data.map(item => <Ticket key={uniqueId()} item={item} />)}
+                {this.props.data.length > 0
+                    ? this.props.data.map(item => <Ticket key={uniqueId()} item={item} />)
+                    : <p className="no-tickets">Ничего не найдено, попробуйте изменить параметры поиска</p>}
             </ul>
         );
     }
@@ -21,6 +23,20 @@ TicketsList.propTypes = {
     data: PropTypes.array.isRequired
 }
 
-export default connect(state => ({
-    data: state.initialState
-}))(TicketsList);
+const mapStateToProps = (state) => {
+    let result = []
+    for (let key in state.checkboxes) {
+        if (state.checkboxes[key]) {
+            result.push(key.toString().split('')[key.length-1])
+        }
+    }
+    const filteredData = state.initialState.filter(ticket => {  
+        return result.includes(ticket.stops.toString())
+    })
+
+    return {
+        data: filteredData
+    }
+}
+
+export default connect(mapStateToProps)(TicketsList);
