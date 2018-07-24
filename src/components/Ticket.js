@@ -10,7 +10,7 @@ const transferName = {
 }
 
 const cashSign = {
-    "RUB": " ₽",
+    "RUB": "₽",
     "USD": "$",
     "EUR": "€"
 }
@@ -24,7 +24,7 @@ const Ticket = props => {
         if (props.currencyId !== "RUB") {
             return `${cashSign[props.currencyId]}${Math.round(props.item.price / props[props.currencyId])}`
         }  else {
-            return props.item.price +cashSign[props.currencyId]
+            return props.item.price + cashSign[props.currencyId]
         }
     }
 
