@@ -7,7 +7,7 @@ export const TOGGLE_ALL_OBSERVER = 'TOGGLE_ALL_OBSERVER';
 
 export const currencyChange = (id) => ({
     type: CURRENCY,
-    id
+    payload: {id}
 });
 
 export const initialState = () => ({

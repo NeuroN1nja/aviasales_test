@@ -9,18 +9,22 @@ const transferName = {
     more: " пересадки"
 }
 
+const cashSign = {
+    "RUB": " ₽",
+    "USD": "$",
+    "EUR": "€"
+}
+
 const Ticket = props => {
     console.log('upd ticketlist');
     const departure_date = moment(props.item.departure_date, "DD-MM-YYYY").locale('ru').format("D MMM YYYY, dd")
     const arrival_date = moment(props.item.arrival_date, "DD-MM-YYYY").locale('ru').format("D MMM YYYY, dd")
 
     const price = () => {
-        if (props.currencyId === "3") {
-            return `€${Math.round(props.item.price / 74)}`
-        } else if (props.currencyId === "2") {
-            return `$${Math.round(props.item.price / 63)}`
-        } else {
-            return props.item.price + " Р"
+        if (props.currencyId !== "RUB") {
+            return `${cashSign[props.currencyId]}${Math.round(props.item.price / props[props.currencyId])}`
+        }  else {
+            return props.item.price + cashSign[props.currencyId]
         }
     }
 

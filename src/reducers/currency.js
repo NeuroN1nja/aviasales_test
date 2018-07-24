@@ -1,9 +1,9 @@
 import { CURRENCY } from "../actions";
 
-export default (activeId = "1", action) => {
+export default (activeId = "RUB", action) => {
     switch (action.type) {
         case CURRENCY: 
-            return action.id
+            return action.payload.id
         default:
             return activeId;
     }

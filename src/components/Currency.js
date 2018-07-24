@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {connect} from 'react-redux'
 import { currencyChange } from '../actions';
 
-const mapCurrency = [["1","RUB"], ["2","USD"], ["3", "EUR"]]
+const mapCurrency = ["RUB", "USD", "EUR"]
 
 const Currency = props => {
         const handleChange = (e) => {
@@ -16,10 +16,10 @@ const Currency = props => {
                 {mapCurrency.map(item => 
                     <li
                         key={uniqueId()}
-                        id={item[0]}
-                        className={props.currencyId === `${item[0]}` ? "tab tab-active" : "tab"}
+                        id={item}
+                        className={props.currencyId === `${item}` ? "tab tab-active" : "tab"}
                     >
-                        {item[1]}
+                        {item}
                     </li>)}
             </ul>
         );
