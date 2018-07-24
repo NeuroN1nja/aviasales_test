@@ -1,6 +1,6 @@
 ## Тестовое задание Aviasales ([frontend](https://aviasales.recruitee.com/o/frontend-developer-js-coffeescript-react%C2%A0redux--aviasalesru))
 
-[мое решение](https://aviasales-test.netlify.com/)
+[Мое решение](https://aviasales-test.netlify.com/)
 
 Основной фронтенд проект нашей команды — это страница выдачи билетов со множеством фильтров, настроек и, собственно, билетов.
 Проект по большей части написан на React, поэтому тестовое задание максимально приближено к ежедневным задачам.
@@ -28,3 +28,5 @@
 
 ### Верстка билета, фильтра, переключения валют (#task4)
 Внутри команды мы используем Sketch (v49), поэтому исходники есть в [.sketch](./search.sketch) и [.png](./search.png). Если у вас нет нужных программ, то воспользуйтесь онлайн аналогами.
+
+[Посмотреть решение](https://aviasales-test.netlify.com/)
