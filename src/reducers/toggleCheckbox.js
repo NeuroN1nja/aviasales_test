@@ -1,11 +1,11 @@
 import { TOGGLE_CHECKBOX, TOGGLE_ALL_CHECKBOX, TOGGLE_ONLY_CHECKBOX, TOGGLE_ALL_OBSERVER } from '../actions'
 
 const checkboxes = {
-    transfer_all: true,
-    transfer_0: true,
-    transfer_1: true,
-    transfer_2: true,
-    transfer_3: true,
+    0: true,
+    1: true,
+    2: true,
+    3: true,
+    transfer_all: true
 }
 
 function changeObj(obj, newValue) {
@@ -19,7 +19,7 @@ function observerAll(obj) {
     for (let key in obj) {
         array.push(obj[key])
     }
-    let result = array.slice(1)
+    let result = array.slice(0, array.length-1)
     return !(result.indexOf(false) !== -1)
 }
 

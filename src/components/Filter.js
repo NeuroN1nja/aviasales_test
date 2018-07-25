@@ -38,10 +38,10 @@ class Filter extends Component {
                         <span className="label">Все</span>
                     </label>
                 </li>
-                <Checkbox checked={this.props.checkboxes.transfer_0} toggle={this.toggleCheckbox} only={this.toggleOnly} name="transfer_0" text="Без пересадок" />
-                <Checkbox checked={this.props.checkboxes.transfer_1} toggle={this.toggleCheckbox} only={this.toggleOnly} name="transfer_1" text="1 пересадка" />
-                <Checkbox checked={this.props.checkboxes.transfer_2} toggle={this.toggleCheckbox} only={this.toggleOnly} name="transfer_2" text="2 пересадки" />
-                <Checkbox checked={this.props.checkboxes.transfer_3} toggle={this.toggleCheckbox} only={this.toggleOnly} name="transfer_3" text="3 пересадки" />
+                <Checkbox checked={this.props.checkboxes[0]} toggle={this.toggleCheckbox} only={this.toggleOnly} name="0" text="Без пересадок" />
+                <Checkbox checked={this.props.checkboxes[1]} toggle={this.toggleCheckbox} only={this.toggleOnly} name="1" text="1 пересадка" />
+                <Checkbox checked={this.props.checkboxes[2]} toggle={this.toggleCheckbox} only={this.toggleOnly} name="2" text="2 пересадки" />
+                <Checkbox checked={this.props.checkboxes[3]} toggle={this.toggleCheckbox} only={this.toggleOnly} name="3" text="3 пересадки" />
             </ul>
         );
     }

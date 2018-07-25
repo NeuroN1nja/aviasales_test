@@ -42,15 +42,9 @@ TicketsList.propTypes = {
 }
 
 const mapStateToProps = (state) => {
-    let result = []
-    for (let key in state.checkboxes) {
-        if (state.checkboxes[key]) {
-            result.push(key.toString().split('')[key.length-1])
-        }
-    }
-    const filteredData = state.initialState.filter(ticket => {  
-        return result.includes(ticket.stops.toString())
-    })
+    
+    const filteredData = state.initialState.filter(ticket => 
+        state.checkboxes[ticket.stops])
 
     return {
         data: filteredData
